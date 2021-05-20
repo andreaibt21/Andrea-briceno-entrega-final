@@ -356,35 +356,33 @@ void mostrarRecaudacionesSaldadas(estructuraContribuyente arrayContribuyente[], 
 
 	if((arrayContribuyente != NULL) && (tamanoContribuyente > 0 ) && (arrayRecaudacion != NULL) && (tamanoRecaudacion > 0))
 	{
+		if(arrayRecaudacion != NULL && tamanoRecaudacion > 0){
 
-	};
-	if(arrayRecaudacion != NULL && tamanoRecaudacion > 0){
+				for(int i = 0; i < tamanoRecaudacion ; i++){
 
-			for(int i = 0; i < tamanoRecaudacion ; i++){
+					if(arrayRecaudacion[i].isEmpty == 0 && arrayRecaudacion[i].estado == 2){
+				printf(" \n         ****************  DATOS PERSONALES  ***************** ");
+				printf("\n   ID.RECAUDACION      MES       TIPO          ESTADO      IMPORTE      ID.CONTRIBUYENTE    NOMBRE");
 
-				if(arrayRecaudacion[i].isEmpty == 0 && arrayRecaudacion[i].estado == 2){
-			printf(" \n         ****************  DATOS PERSONALES  ***************** ");
-			printf("\n   ID.RECAUDACION      MES       TIPO          ESTADO      IMPORTE      ID.CONTRIBUYENTE    NOMBRE");
+						for(int j= 0; j < tamanoRecaudacion; j++){
+										if ((arrayRecaudacion[j].idContribuyente == arrayContribuyente[i].idContribuyente) &&
+												(arrayRecaudacion[j].isEmpty == 0)){
 
-					for(int j= 0; j < tamanoRecaudacion; j++){
-									if ((arrayRecaudacion[j].idContribuyente == arrayContribuyente[i].idContribuyente) &&
-											(arrayRecaudacion[j].isEmpty == 0)){
+													mostrarUnaRecaudacion(arrayRecaudacion[j]);
+													printf("      %s", arrayContribuyente[i].nombre);
 
-												mostrarUnaRecaudacion(arrayRecaudacion[j]);
-												printf("      %s", arrayContribuyente[i].nombre);
+										}else{
+											printf("No hay recaudaciones saldadas");
+											break;
+										}
 
-									}else{
-										printf("No hay recaudaciones saldadas");
-										break;
-									}
+									};
 
-								};
-
+					}
 				}
-			}
 
 		}
-
+	};
 
 
 };

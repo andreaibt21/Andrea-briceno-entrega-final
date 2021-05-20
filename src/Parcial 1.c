@@ -17,6 +17,7 @@
 #include "utn.h"
 #include "recaudacion.h"
 #include "validacion.h"
+#include "informes.h"
 
 #define CANTIDADCONTRIBUYENTES 50
 #define CANTIDADRECAUDACION 50
@@ -33,7 +34,7 @@ int main(void) {
 	int respuesta = 0;
     int contadorDeIDContribuyente = 1000;
     int contadorDeIDRecaudacion = 100;
-
+    int respuestaInformes = 0;
 
 
 		do {
@@ -94,8 +95,29 @@ int main(void) {
 				} else{	printf("\n Error, debe de ingresar al menos  un contibuyente");
 				}
 				break;
+			case 9: // Imprimir Recaudaciones
+				if (estaVaciaLaEstructuraContribuyentes( contribuyente, CANTIDADCONTRIBUYENTES)){
 
-			case 9:
+					mostrarMenuInformes(&respuestaInformes);
+
+					switch (respuestaInformes) {
+
+					case 1:
+
+					break;
+					case 2:
+						mostrarCantidadRSaldadas(recaudacion, CANTIDADRECAUDACION)		;
+									break;
+					case 3:
+
+									break;
+					}
+
+					mostrarCantidadRSaldadas( recaudacion, CANTIDADRECAUDACION);
+				} else{	printf("\n Error, debe de ingresar al menos  un contibuyente");
+				}
+				break;
+			case 10:
 				printf("\n **********   Usted ha salido    *********");
 			break;
 		}

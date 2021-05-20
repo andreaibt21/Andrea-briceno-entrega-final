@@ -88,11 +88,12 @@ int mostrarMenu(int *respuesta) {
 			"\n |  6. Saldar Recaudación           |"
 			"\n |  7. Imprimir Contribuyentes      |"
 			"\n |  8. Imprimir Recaudación         |"
-			"\n |  9. SALIR                        |"
+			"\n |  9. Informes                     |"
+			"\n |  10. SALIR                       |"
 			"\n |__________________________________|\n"
 			);
 
-	utn_getNumero(&auxRespuesta, "\n  Ingrese una opcion    ","\nError, ingrese una opcion del 1 al 9 \n\n", 1, 9,3);
+	utn_getNumero(&auxRespuesta, "\n  Ingrese una opcion    ","\nError, ingrese una opcion del 1 al 9 \n\n", 1, 10,3);
 	*respuesta = auxRespuesta;
 
 	return 0;
