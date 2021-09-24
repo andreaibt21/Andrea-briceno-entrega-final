@@ -28,7 +28,7 @@
 
 /*
 void contribuyentesConMasRecaudaciones(estructuraContribuyente arrayContribuyente[], int tamanoContribuyente, estructuraRecaudacion arrayRecaudacion[], int tamanoRecaudacion){
-	int contadorRecaudaciones = 0;
+	int contadorRecaudaciones  = 0;
 	//int mayorRecaudaciones;
 	if((arrayContribuyente != NULL) && (tamanoContribuyente > 0 ) && (arrayRecaudacion != NULL) && (tamanoRecaudacion > 0)){
 				for(int i = 0; i < tamanoRecaudacion ; i++){
@@ -56,10 +56,7 @@ void contribuyentesConMasRecaudaciones(estructuraContribuyente arrayContribuyent
 				}
 		}
 };*/
-/*
- 	b) Cantidad de recaudaciones saldadas de importe mayor a 1000: Se imprimirá
-	la cantidad de recaudaciones en estado “saldado” con ese importe o mayor.
- */
+
 void mostrarCantidadRSaldadas(estructuraRecaudacion arrayRecaudacion[], int tamanoRecaudacion){
 int contadorRSaldadas = 0;
 	if((arrayRecaudacion != NULL) && (tamanoRecaudacion > 0))	{
@@ -88,16 +85,7 @@ int contadorRSaldadas = 0;
 	};
 
 
-};/*
-    a) Contribuyentes con más recaudaciones en estado “refinanciar”.
-	b) Cantidad de recaudaciones saldadas de importe mayor a 1000: Se imprimirá
-	la cantidad de recaudaciones en estado “saldado” con ese importe o mayor.
-	c) Informar todos los datos de los contribuyentes de un tipo de recaudación
-	ingresada por el usuario (ARBA, IIBB, GANANCIAS)
-	d)Nombre y c.u.i.l. de los Contribuyentes que pagaron impuestos en el mes de
-	FEBRERO.
-*/
-
+};
 int mostrarMenuInformes(int *respuesta) {
 
 	int auxRespuesta;
